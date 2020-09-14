@@ -63,6 +63,7 @@ public class CNotas extends javax.swing.JFrame {
         P = new javax.swing.JLabel();
         Calcular3 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        Limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -323,21 +324,34 @@ public class CNotas extends javax.swing.JFrame {
                 .addGap(38, 38, 38))
         );
 
+        Limpiar.setText("Limpiar");
+        Limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(219, 219, 219))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLayeredPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLayeredPane7)
-                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(219, 219, 219))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLayeredPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLayeredPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Limpiar)
+                                .addGap(43, 43, 43)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -355,7 +369,9 @@ public class CNotas extends javax.swing.JFrame {
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLayeredPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(Limpiar)
+                .addContainerGap())
         );
 
         pack();
@@ -388,41 +404,82 @@ public class CNotas extends javax.swing.JFrame {
 
         if (calculo1 >= 6) {
             P1.setText(String.valueOf("Aprobado"));
+            P1.setOpaque(true);
+            PN1.setOpaque(true);
             P1.setBackground(Color.green);
             PN1.setBackground(Color.green);
         } else {
             P1.setText(String.valueOf("Repobrado"));
+            P1.setOpaque(true);
+            PN1.setOpaque(true);
             P1.setBackground(Color.red);
             PN1.setBackground(Color.red);
         };
         if (calculo2 >= 6) {
             P2.setText(String.valueOf("Aprobado"));
+            P2.setOpaque(true);
+            PN2.setOpaque(true);
             P2.setBackground(Color.green);
             PN2.setBackground(Color.green);
         } else {
             P2.setText(String.valueOf("Repobrado"));
+            P2.setOpaque(true);
+            PN2.setOpaque(true);
             P2.setBackground(Color.red);
             PN2.setBackground(Color.red);
         };
         if (calculo3 >= 6) {
             P3.setText(String.valueOf("Aprobado"));
+            P3.setOpaque(true);
+            PN3.setOpaque(true);
             P3.setBackground(Color.green);
             PN3.setBackground(Color.green);
         } else {
             P3.setText(String.valueOf("Repobrado"));
+            P3.setOpaque(true);
+            PN3.setOpaque(true);
             P3.setBackground(Color.red);
             PN3.setBackground(Color.red);
         };
         if (calculo >= 6) {
             P.setText(String.valueOf("Aprobado"));
+            P.setOpaque(true);
+            PN4.setOpaque(true);
             P.setBackground(Color.green);
             PN4.setBackground(Color.green);
         } else {
             P.setText(String.valueOf("Repobrado"));
+            P.setOpaque(true);
+            PN4.setOpaque(true);
             P.setBackground(Color.red);
             PN4.setBackground(Color.red);
         };
     }//GEN-LAST:event_Calcular3ActionPerformed
+
+    private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
+        Lab1.setText("");
+        Lab2.setText("");
+        Lab3.setText("");
+        Par1.setText("");
+        Par2.setText("");
+        Par3.setText("");
+        PN1.setText("");
+        PN1.setOpaque(false);
+        PN2.setText("");
+        PN2.setOpaque(false);
+        PN3.setText("");
+        PN3.setOpaque(false);
+        PN4.setText("");
+        PN4.setOpaque(false);
+        P1.setText("");
+        P1.setOpaque(false);
+        P2.setText("");
+        P2.setOpaque(false);
+        P3.setText("");
+        P3.setOpaque(false);
+        P.setText("");
+        P.setOpaque(false);
+    }//GEN-LAST:event_LimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -464,6 +521,7 @@ public class CNotas extends javax.swing.JFrame {
     private javax.swing.JTextField Lab1;
     private javax.swing.JTextField Lab2;
     private javax.swing.JTextField Lab3;
+    private javax.swing.JButton Limpiar;
     private javax.swing.JLabel P;
     private javax.swing.JLabel P1;
     private javax.swing.JLabel P2;
